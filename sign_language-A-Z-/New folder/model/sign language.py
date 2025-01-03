@@ -2,13 +2,13 @@ import cv2 as cv
 import mediapipe as mp
 import numpy as np
 from tensorflow import keras
-# Use a pipeline as a high-level helper
+
 from transformers import pipeline
 
 from PIL import Image
 
-pipe = pipeline("image-classification", model="dima806/hand_gestures_image_detection")
-# pipe = pipeline("image-classification", model="Hemg/sign-language-classification")
+pipe = pipeline("image-classification", model="dima806/hand_gestures_image_detection") 
+
 model = keras.models.load_model(".\sign_model.h5")
 
 cap = cv.VideoCapture(0)
